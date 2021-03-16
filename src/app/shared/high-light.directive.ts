@@ -11,13 +11,13 @@ export class HighLightDirective {
     // or we can user Rendere2.setStyle and Renderer2.removeStyle on leave
   }
 
-  @Input('appHighlight') highlightColor: string;
+  @Input('appHighlight') highlightColor: string;  //The color that we will enter
 
-  @HostListener('mouseenter') onMouseEnter(){
+  @HostListener('mouseenter') onMouseEnter(){  // If mouse enter 
     this.highlight(this.highlightColor);
   }
 
-  @HostListener('mouseleave') onMouseLeave(){
+  @HostListener('mouseleave') onMouseLeave(){  // if mouse leave
     this.highlight(null);
   }
 
