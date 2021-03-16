@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SharedRoutingModule } from './shared-routing.module';
+
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { FindItemPipe } from './find-item.pipe';
 import { HighLightDirective } from './high-light.directive';
@@ -15,7 +15,16 @@ import { ToastrComponent } from './toastr/toastr.component';
   declarations: [ConfirmationComponent, FindItemPipe, HighLightDirective, ListComponent, ModalComponent, SpinnerOverlayComponent, ToastrComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    
+  ],
+  exports:[
+    ConfirmationComponent,
+    FindItemPipe, 
+    HighLightDirective, 
+    ListComponent, 
+    ModalComponent, 
+    SpinnerOverlayComponent, 
+    ToastrComponent
   ]
 })
 export class SharedModule { }
