@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "task-manager-erard": {
+      "hosting": {
+        "task-manager": [
+          "task-manager-erard"
+        ]
+      }
+    }
+  }
+}
