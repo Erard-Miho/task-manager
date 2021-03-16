@@ -1,15 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-
+import { 
+  Component, 
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild
+ } from '@angular/core';
+import { ModalComponent } from '../modal/modal.component';
+import { ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-confirmation',
   templateUrl: './confirmation.component.html',
   styleUrls: ['./confirmation.component.scss']
 })
-export class ConfirmationComponent implements OnInit {
+export class ConfirmationComponent {
+
+  @Input() message: string;
+  @Input() title: string;
+  @Output() confirmEvent = new EventEmitter<Event>();
+  @ViewChild(ModalComponent) modal: ModalComponent;
 
   constructor() { }
 
-  ngOnInit(): void {
+  openModal(): void{
+    this.modal.open();
   }
+
+  confirm($event: Event):void{
+    this.modal.close();
+    this.confirmEvent.emit($event);
+  }
+
 
 }
