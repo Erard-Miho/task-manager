@@ -9,13 +9,13 @@ import { ListComponent } from './list/list.component';
 import { ModalComponent } from './modal/modal.component';
 import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.component';
 import { ToastrComponent } from './toastr/toastr.component';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [ConfirmationComponent, FindItemPipe, HighLightDirective, ListComponent, ModalComponent, SpinnerOverlayComponent, ToastrComponent],
   imports: [
     CommonModule,
-    
+    RouterModule
   ],
   exports:[
     ConfirmationComponent,

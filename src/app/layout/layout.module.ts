@@ -5,12 +5,14 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullLayoutComponent } from './full-layout/full-layout.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [FooterComponent, MenuComponent, PageNotFoundComponent, FullLayoutComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FullLayoutComponent,
